@@ -1,4 +1,4 @@
-module github.com/lllwan/mylg
+module github.com/mehrdadrad/mylg
 
 go 1.12
 
