@@ -187,9 +187,10 @@ func (d *Request) RunDig() {
 		r, rtt, err = c.Exchange(m, net.JoinHostPort(d.Host, "53"))
 
 		// fall back to tcp
-		if err == dns.ErrTruncated && i == 0 {
-			c.Net = "tcp"
-		}
+
+		//if err == dns.ErrTruncated && i == 0 {
+		//	c.Net = "tcp"
+		//}
 		// last chance: udp + A records instead of any records
 		if err != nil && i == 1 {
 			c.Net = "udp"
